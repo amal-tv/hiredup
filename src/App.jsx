@@ -8,50 +8,72 @@ import { JobListing } from "./pages/JobListing"
 import { Postjob } from "./pages/Postjob"
 import Savedjobs from "./pages/Savedjobs"
 import { Myjobs } from "./pages/Myjobs"
+import { ProtectedRoute } from "./components/ProtectedRoute"
 
 
 
 const router = createBrowserRouter([
   {
-    element : <AppLayout />,
-    children : [
+    element: <AppLayout />,
+    children: [
       {
-        path : '/',
-        element :<Landing/>,
+        path: '/',
+        element: <Landing />,
       },
       {
-        path : '/onboarding',
-        element : <Onboarding />,
+        path: '/onboarding',
+        element:
+          <ProtectedRoute>
+           <Onboarding />
+          </ProtectedRoute>,
       },
       {
-        path : '/jobs',
-        element : <JobListing />,
+        path: '/jobs',
+        element:
+          <ProtectedRoute>
+            <JobListing />
+          </ProtectedRoute>,
       },
       {
-        path : '/job/:id',
-        element : <Job />,
+        path: '/job/:id',
+        element:
+        <ProtectedRoute>
+             <Job />
+      </ProtectedRoute>,
+     
       },
       {
-        path : '/post-job',
-        element : <Postjob />,
+        path: '/post-job',
+        element:
+          <ProtectedRoute>
+            <Postjob />
+          </ProtectedRoute>,
       },
       {
-        path : '/my-jobs',
-        element : <Myjobs />,
+        path: '/my-jobs',
+        element:
+          <ProtectedRoute>
+            <Myjobs />
+          </ProtectedRoute>,
       },
       {
-        path : '/saved-jobs',
-        element : <Savedjobs />,
+        path: '/saved-jobs',
+        element:
+          <ProtectedRoute>
+            <Savedjobs />
+          </ProtectedRoute>,
+
+
       }
     ]
   }
 ])
 
 function App() {
-  
-      return <RouterProvider router={router} />;
 
-  
+  return <RouterProvider router={router} />;
+
+
 }
 
 export default App
