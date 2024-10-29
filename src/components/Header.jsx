@@ -67,8 +67,10 @@ export const Header = () => {
       </nav>
       {showSignIn && <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'
       onClick={handleOverlayClick}>
-          <SignIn signUpForceRedirectUrl='/onboarding'
-          signUpFallbackRedirectUrl='/onboarding'/>
+      <SignIn 
+  redirectUrl='/onboarding'  // This will handle login redirects
+  signUpUrl='/onboarding'    // Optional: This handles signup redirects
+/>
 
       </div>
       }

@@ -12,6 +12,18 @@ if(isLoaded && !isSignedIn && isSignedIn !== undefined){
     return <Navigate to="/?sign-in=true" />
 }
 
-//check onboarding if it is a user or a recruter
+if(
+  user !== undefined && 
+  !user?.unsafeMetadata.role &&
+  pathname !== "/onboarding"
+)
+return <Navigate to="/onboarding" />;
+
+
+
+
+
+
+
   return children
 }
