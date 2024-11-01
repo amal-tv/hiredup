@@ -73,3 +73,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.wmde-markdown ul {
+  list-style-type: disc; /* Correct 'desc' to 'disc' for bullet points */
+  padding-left: 25px;
+  color: white;
+}

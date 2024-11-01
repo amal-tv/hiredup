@@ -55,3 +55,23 @@ export async function saveJobs(token,{alreadySaved},saveData){
    
     
 }
+
+
+
+export async function getSingleJob(token,{job_id}) {
+    
+ const supabase = await supabaseClient(token);
+
+ const { data, error } = await supabase
+    .from("jobs")
+    .select("*, company:companies(name, logo_url), applications:applications!applications_job_id_fkey(*)")
+    .eq("id", job_id)
+    .single();
+
+ if(error){
+    console.error("error fetching from the compnaies",error);
+    return null;
+ }
+
+  return data;
+}
