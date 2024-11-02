@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { ApplyJob } from '@/components/ApplyJob';
 
 export const Job = () => {
 
@@ -84,6 +85,13 @@ export const Job = () => {
         className='bg-transparent text-lg text-gray-600 leading-relaxed p-4 sm:text-xl'
       />
 
+
+      {job?.recruiter_id !== user?.id && <ApplyJob job={job}
+      user={user}
+      fetchJob={fnJob}
+      applied={job?.applications?.find((ap)=> ap.candidate_id === user.id)}
+      /> }
+ 
     </div>
   )
 }
