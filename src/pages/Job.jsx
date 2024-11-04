@@ -16,6 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { ApplyJob } from '@/components/ApplyJob';
+import { ApplicationCard } from '@/components/ApplicationCard';
 
 export const Job = () => {
 
@@ -62,13 +63,13 @@ export const Job = () => {
 
       {/* hiring status */}
       {job?.recruiter_id === user?.id && (
-        <Select  onValueChange={handleStatusChange}>
+        <Select onValueChange={handleStatusChange}>
           <SelectTrigger className={`w-full ${job?.isOpen ? "bg-green-950" : "bg-red-950"}`}>
             <SelectValue placeholder={"Hiring Status " + (job?.isOpen ? "(open)" : "(closed)")} />
           </SelectTrigger>
           <SelectContent>
-                 <SelectItem value="open">Open</SelectItem>
-                 <SelectItem value="closed">Closed</SelectItem>
+            <SelectItem value="open">Open</SelectItem>
+            <SelectItem value="closed">Closed</SelectItem>
           </SelectContent>
         </Select>
 
@@ -87,11 +88,29 @@ export const Job = () => {
 
 
       {job?.recruiter_id !== user?.id && <ApplyJob job={job}
-      user={user}
-      fetchJob={fnJob}
-      applied={job?.applications?.find((ap)=> ap.candidate_id === user.id)}
-      /> }
- 
+        user={user}
+        fetchJob={fnJob}
+        applied={job?.applications?.find((ap) => ap.candidate_id === user.id)}
+      />}
+
+
+      <div>
+
+
+        {job?.applications?.length > 0 && job?.recruiter_id === user?.id && (
+          <div className='flex flex-col gap-2'>
+
+            <h2 className='"text-2xl sm:text-3xl font-bold'>Applications</h2>
+            {
+              job?.applications.map((application) => {
+                return <ApplicationCard key={application.id} application={application} />
+              })}
+
+
+          </div>
+        )}
+
+      </div>
     </div>
   )
 }
