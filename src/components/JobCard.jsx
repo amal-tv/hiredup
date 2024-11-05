@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { saveJobs } from '@/api/apiJobs';
 import { useEffect } from 'react';
 import { UseFetch } from '@/hooks/UseFetch';
+import { BarLoader } from 'react-spinners';
 
 export const JobCard = ({
     job,
@@ -32,14 +33,17 @@ export const JobCard = ({
     useEffect(()=>{
         if(savedjobs !==undefined) setSaved(savedjobs?.length > 0);
     },[savedjobs])
-
+  
+   
 
   return (
     <Card className="flex flex-col">
+{job && (
+    <>
 
-       <CardHeader>
+<CardHeader>
         <CardTitle className="flex justify-between font-bold">{job.title}
-
+       
         {!isMyjob && <Trash2Icon fill="red" size={"18"} className='text-red-300 cursor-pointer'/>}
 
         </CardTitle>
@@ -76,6 +80,13 @@ export const JobCard = ({
       )}
 
         </CardFooter>
+
+
+    </>
+)
+    
+}
+       
     </Card>
   )
 }

@@ -1,7 +1,6 @@
 import { getSingleJob, updateHiringStatus } from '@/api/apiJobs';
 import { UseFetch } from '@/hooks/UseFetch';
 import { useUser } from '@clerk/clerk-react'
-import MarkdownEditor from '@uiw/react-markdown-editor';
 import { Briefcase, DoorClosed, DoorOpen, MapPin } from 'lucide-react';
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
@@ -17,6 +16,7 @@ import {
 } from "@/components/ui/select"
 import { ApplyJob } from '@/components/ApplyJob';
 import { ApplicationCard } from '@/components/ApplicationCard';
+import MDEditor from '@uiw/react-md-editor';
 
 export const Job = () => {
 
@@ -81,7 +81,7 @@ export const Job = () => {
       <h2 className='text-2xl sm:text-3xl font-bold'>About the job</h2>
       <h2 className='text-2xl sm:text-3xl font-bold'>{job?.description}</h2>
       <h2 className='text-2xl sm:text-3xl font-bold'>What we are looking for</h2>
-      <MarkdownEditor.Markdown
+      <MDEditor.Markdown
         source={job?.requirements}
         className='bg-transparent text-lg text-gray-600 leading-relaxed p-4 sm:text-xl'
       />
