@@ -1,40 +1,46 @@
-Job Portal
-This is a job portal platform built with React.js, Clerk, Supabase, ShadCN, Tailwind CSS, and React Hook Form. It provides tailored features for both candidates and recruiters, enabling seamless job search and posting functionality.
+🌐 Job Portal
+A modern job portal platform for candidates and recruiters, built with cutting-edge technologies.
 
-Features
-Candidate Features
+<!-- Replace with actual banner if available -->
 
-Browse job listings
-Save jobs for later
-Apply to jobs directly
-Recruiter Features
-
-Post new job listings
-Manage job applications
-View candidate profiles
-Tech Stack
-Frontend: React.js, Tailwind CSS, ShadCN
+📌 Features
+👤 Candidate Mode
+Job Browsing: Discover various job listings.
+Save Jobs: Bookmark positions of interest.
+Quick Applications: Apply with ease.
+🧑‍💼 Recruiter Mode
+Job Posting: Share job opportunities.
+Application Management: Review candidate applications.
+Candidate Search: Browse potential candidates.
+⚙️ Tech Stack
+Frontend: React.js, ShadCN
+UI Styling: Tailwind CSS
 Authentication: Clerk
 Database: Supabase
-Forms: React Hook Form
-Getting Started
-Clone the repository:
+Form Handling: React Hook Form
+🚀 Getting Started
+1️⃣ Prerequisites
+Node.js
+Clerk and Supabase accounts
+2️⃣ Installation
+Clone and install dependencies:
 
 bash
 Copy code
 git clone https://github.com/yourusername/job-portal.git
-Install dependencies:
-
-bash
-Copy code
+cd job-portal
 npm install
-Environment Variables: Set up .env file with required environment variables:
+3️⃣ Environment Setup
+Create a .env file with these keys:
 
-VITE_CLERK_PUBLISHABLE_KEY
-SUPABASE_URL
-SUPABASE_ANON_KEY
-Run the Application:
-
+plaintext
+Copy code
+VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_supabase_key
+4️⃣ Start the Development Server
 bash
 Copy code
 npm run dev
+📝 License
+This project is licensed under the MIT License.
