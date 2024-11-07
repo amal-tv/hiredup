@@ -38,6 +38,9 @@ git clone https://github.com/yourusername/job-portal.git
 cd job-portal
 npm install
 
+
+
+
 ### 3️⃣ Environment Setup
 
 Create a `.env` file with these keys:
