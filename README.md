@@ -1,6 +1,6 @@
 # 🌐 Job Portal
 **A modern job portal platform for candidates and recruiters, built with cutting-edge technologies.**
-![Job Portal Banner](https://github.com/amal-tv/job-portal/blob/master/public/landing.png)
+![Job Portal Banner](https://github.com/amal-tv/hiredup/blob/master/public/landing.png)
 
 
 ## 📌 Features
