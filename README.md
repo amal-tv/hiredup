@@ -23,7 +23,7 @@ Form Handling: React Hook Form
 Node.js
 Clerk and Supabase accounts
 2️⃣ Installation
-Clone and install dependencies:
+Clone the repository and install dependencies:
 
 bash
 Copy code
