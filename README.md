@@ -1,4 +1,5 @@
-# 🌐 Job Portal
+# 🌐 HiredUP
+##  job portal
 **A modern job portal platform for candidates and recruiters, built with cutting-edge technologies.**
 ![Job Portal Banner](https://github.com/amal-tv/hiredup/blob/master/public/landing.png)
 
