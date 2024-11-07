@@ -41,3 +41,9 @@ VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key
 SUPABASE_URL=your_supabase_url
 SUPABASE_ANON_KEY=your_supabase_key
 ```
+
+### Start the Development Server
+After setting up the environment, run the following command:
+
+```bash
+npm run dev
