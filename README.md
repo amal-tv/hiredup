@@ -36,7 +36,7 @@ Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/yourusername/job-portal.git
 cd job-portal
-npm install
+npm install```
 
 
 
