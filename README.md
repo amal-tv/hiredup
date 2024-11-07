@@ -12,7 +12,7 @@
 ### 🧑‍💼 Recruiter Mode
 - **Job Posting**: Share job opportunities.
 - **Application Management**: Review candidate applications.
-- **Candidate Search**: Browse potential candidates.
+
 
 ## ⚙️ Tech Stack
 - **Frontend**: React.js, ShadCN
